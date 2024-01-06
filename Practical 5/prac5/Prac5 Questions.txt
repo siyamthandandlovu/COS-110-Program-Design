@@ -1,0 +1,9 @@
+why isnt my getMaxNum
+
+so by checking whether the array is empty 
+they mean checking if testerInterfaceObject->currNumTesters == 0
+
+checking if array is null
+is checking if testers == NULL?
+
+where testers is the NUmberTester**

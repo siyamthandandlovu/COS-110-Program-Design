@@ -1,0 +1,66 @@
+Begin Testing IsDivisble
+
+NumberTester::NumberTester()
+ValueDependantTester::ValueDependantTester(int val)
+IsDivisible::IsDivisible(int value) with value :14
+NumberTester::NumberTester()
+ValueDependantTester::ValueDependantTester(int val)
+IsDivisible::IsDivisible(int value) with value :14
+NumberTester* IsDivisible::clone()
+Alive Objects according to ptNumTester1 : int NumberTester::getNumAliveObjects()
+2
+Alive Objects according to ptDivisible1 : int IsDivisible::getNumAliveObjects()
+2
+IsDivisible::~IsDivisible()
+ValueDependantTester::~ValueDependantTester()
+NumberTester::~NumberTester()
+
+thing is since the clone activates each constructor 3 times, shouldnt there be 
+
+when i say delete the pointer pointing to a clone the destructors are as follows
+NumberTester::~NumberTester()
+IsDivisible::~IsDivisible()
+ValueDependantTester::~ValueDependantTester()
+NumberTester::~NumberTester()
+
+^^^
+Q: if child classes simply inherit a static varible like NumAliveObjects it would hold the number of alove parent class objects right?
+Not the number of alive child objects?
+
+
+
+
+
+NumberTester::NumberTester() || NumberTester::numAliveObjects = 1
+ValueDependantTester::ValueDependantTester(int val) || ValueDependantTester::numAliveObjects = 1
+IsDivisible::IsDivisible(int value) || IsDivisible::numAliveObjects = 1
+NumberTester::NumberTester() || NumberTester::numAliveObjects = 2
+ValueDependantTester::ValueDependantTester(int val) || ValueDependantTester::numAliveObjects = 2
+IsDivisible::IsDivisible(int value) || IsDivisible::numAliveObjects = 2
+NumberTester* IsDivisible::clone()
+Alive Objects - ptNumTester1 : 2
+Alive Objects - ptDivisible1 : 2
+NumberTester::~NumberTester()|| NumberTester::numAliveObjects = 1
+Alive Objects - ptNumTester1 (Again) : 1
+IsDivisible::~IsDivisible() || IsDivisible numAliveObjects = 1
+ValueDependantTester::~ValueDependantTester() || ValueDependantTester::numAliveObjects = 1
+NumberTester::~NumberTester()|| NumberTester::numAliveObjects = 0
+
+
+
+^^
+Q :
+evaluate(val: int): bool 
+This function should determine if the passed in value is divisible with the inherited
+value member. -> by that they mean passed in value / inherited value?
+
+
+^^
+Q
+a null array = an array of nulls?
+what does an array of size 0 even look like though?
+isnt it just nothing?
+
+
+
+

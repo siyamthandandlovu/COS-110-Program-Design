@@ -1,0 +1,39 @@
+/*
+//UndervaluedEx
+template <class E>
+UndervaluedEx::UndervaluedEx( E* uv , double s ){
+//A constructor which takes in two parameters, to assign to its member variables
+underVal = uv;//as in the point to the same thing? they didnt mention deep copies ^^
+//*underVal = *uv;
+sum = s;
+}
+my exceptions cpp 
+
+
+template <class E>
+E* UndervaluedEx::getUndervalued() const{
+return underVal;
+}
+
+
+
+template <class E>
+double UndervaluedEx::getSum() const{
+return sum;
+}
+//UndervaluedEx
+
+
+
+//NotFoundEx
+template <class E>
+NotFoundEx( E* nf ){
+missing = nf;//again deep copy or not?^^
+}
+
+template <class E>//compiler doesnt know what e is
+E* getNotFound() const{
+return missing;
+}
+//NotFoundEx
+*/

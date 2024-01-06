@@ -1,0 +1,4 @@
+#ifndef MULTIPLYOPERATOR_H
+#define MULTIPLYOPERATOR_H
+
+#endif
